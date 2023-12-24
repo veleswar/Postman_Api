@@ -152,7 +152,7 @@
 							"var orderid = orderResponse.orders[0]",
 							"pm.test(\"verify order created  successful\",()=>{",
 							"pm.expect(orderResponse.message).to.eql(\"Order Placed Successfully\")",
-							"//get token value and set to env variable",
+							"//get token value and set to env variables",
 							"});",
 							"pm.environment.set('OrderId',orderid)",
 							"",
