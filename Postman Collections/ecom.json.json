@@ -290,7 +290,7 @@
 						"type": "text"
 					}
 				],
-				"url": "https://rahulshettyacademy.com/api/ecom/product/delete-product/{{productId}}"
+				"url": "https://rahulshettyacademy.com/api/ecom/product/delete-product/65964a1a9fd99c85e8fd5bae"
 			},
 			"response": []
 		},
