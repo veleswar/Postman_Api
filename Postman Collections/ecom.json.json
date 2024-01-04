@@ -177,7 +177,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"orders\": [\n    {\n      \"country\": \"India\",\n      \"productOrderedId\": \"6586ff449fd99c85e8f1e23b\"\n    }\n  ]\n}",
+					"raw": "{\n  \"orders\": [\n    {\n      \"country\": \"India\",\n      \"productOrderedId\": \"65964ac49fd99c85e8fd5c98\"\n    }\n  ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -244,6 +244,40 @@
 				}
 			],
 			"id": "6a4a3ab2-e19b-4257-93de-39b9718ca909",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}",
+						"type": "text"
+					}
+				],
+				"url": "https://rahulshettyacademy.com/api/ecom/product/delete-product/{{productId}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "aa08ac91-8879-484e-8389-1120b2181705",
+						"exec": [
+							"pm.test(\"verify order created  successful\",()=>{",
+							"pm.expect(pm.response.json().message).to.eql(\"Product Deleted Successfully\")",
+							"//get token value and set to env variable",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "f7d2ca91-0413-4ac6-a2a2-8a3d01920eef",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
